@@ -1,0 +1,1281 @@
+{
+  "name": "PersonalAssist",
+  "intents": [
+    {
+      "intent": "DigitalStorage",
+      "examples": [
+        {
+          "text": "gbTotb"
+        },
+        {
+          "text": "mbTogb"
+        },
+        {
+          "text": "megabiteToGegabite"
+        },
+        {
+          "text": "byteTokb"
+        },
+        {
+          "text": "byteToKilobite"
+        },
+        {
+          "text": "byte"
+        },
+        {
+          "text": "tb"
+        },
+        {
+          "text": "gb"
+        },
+        {
+          "text": "mb"
+        },
+        {
+          "text": "kb"
+        }
+      ]
+    },
+    {
+      "intent": "CharacterSetEncoding",
+      "examples": [
+        {
+          "text": "UNICODE UTF-8"
+        },
+        {
+          "text": "UNICODE UTF-16"
+        },
+        {
+          "text": "ASCII"
+        }
+      ]
+    },
+    {
+      "intent": "Calendar",
+      "examples": [
+        {
+          "text": "today date"
+        },
+        {
+          "text": "today"
+        },
+        {
+          "text": "schedule date"
+        },
+        {
+          "text": "calander date"
+        }
+      ]
+    },
+    {
+      "intent": "CharacterConvertor",
+      "examples": [
+        {
+          "text": "binaryToOctal"
+        },
+        {
+          "text": "decimalToBinary"
+        },
+        {
+          "text": "HexaToBinary"
+        },
+        {
+          "text": "binaryToDecimal"
+        },
+        {
+          "text": "HexaDecimal"
+        },
+        {
+          "text": "Octal"
+        },
+        {
+          "text": "Decimal"
+        },
+        {
+          "text": "Binary"
+        },
+        {
+          "text": "octalToBinary"
+        },
+        {
+          "text": "binaryToHexa"
+        }
+      ]
+    },
+    {
+      "intent": "Reminder",
+      "examples": [
+        {
+          "text": "Tell Me today Reminder"
+        },
+        {
+          "text": "tommorow Reminder"
+        },
+        {
+          "text": "today Reminder"
+        },
+        {
+          "text": "Reminder"
+        }
+      ]
+    },
+    {
+      "intent": "Discovery",
+      "examples": [
+        {
+          "text": "tell me something  about bluebolt"
+        },
+        {
+          "text": "bluebolt"
+        },
+        {
+          "text": "Why blue bolt"
+        },
+        {
+          "text": "What is blueblot"
+        },
+        {
+          "text": "What is the benefit of using bluebolt"
+        }
+      ],
+      "description": "For specific product docu"
+    },
+    {
+      "intent": "Java_ProgrammingLanguage",
+      "examples": [
+        {
+          "text": "What are the  WrapperClass"
+        },
+        {
+          "text": "What is Array"
+        },
+        {
+          "text": "What is Collection"
+        },
+        {
+          "text": "What is InerClass"
+        },
+        {
+          "text": "Features of OPP"
+        },
+        {
+          "text": "What is Serilization"
+        },
+        {
+          "text": "What is I18N"
+        },
+        {
+          "text": "What is Spring"
+        },
+        {
+          "text": "CachePattern"
+        },
+        {
+          "text": "ServiceLocator"
+        },
+        {
+          "text": "Facad Pattern"
+        },
+        {
+          "text": "What is  FlyWeightpattern"
+        },
+        {
+          "text": "What is ProxyPattern"
+        },
+        {
+          "text": "Whatis AbstarctFactory"
+        },
+        {
+          "text": "What is FactoryPattern"
+        },
+        {
+          "text": "What is Singleton"
+        },
+        {
+          "text": "Synchronzation"
+        },
+        {
+          "text": "What  is datatype"
+        },
+        {
+          "text": "What is java?"
+        },
+        {
+          "text": "how to write helloWorld program"
+        },
+        {
+          "text": "What is Thread"
+        },
+        {
+          "text": "What is Jmock"
+        },
+        {
+          "text": "What is Sonar"
+        },
+        {
+          "text": "What is CodeCoverage"
+        },
+        {
+          "text": "What is JACOCO"
+        },
+        {
+          "text": "What is Junit"
+        },
+        {
+          "text": "what is SessionReplytion"
+        },
+        {
+          "text": "Use of Sticky Session"
+        },
+        {
+          "text": "What is Clustring"
+        },
+        {
+          "text": "What is the use of httpd  server"
+        },
+        {
+          "text": "What is CMS server"
+        },
+        {
+          "text": "Difference between Jboss and Wildfly"
+        },
+        {
+          "text": "Use of Jboss"
+        },
+        {
+          "text": "Use of Tomcat server"
+        },
+        {
+          "text": "What is Jsp"
+        },
+        {
+          "text": "What is Servlet"
+        },
+        {
+          "text": "What is  Spring transaction"
+        },
+        {
+          "text": "What is AOP"
+        },
+        {
+          "text": "What is Annotaion"
+        },
+        {
+          "text": "What is JSON"
+        },
+        {
+          "text": "What is XML"
+        },
+        {
+          "text": "What is JMS"
+        },
+        {
+          "text": "What is WebServices based REST"
+        },
+        {
+          "text": "What is WebService based SOAP"
+        },
+        {
+          "text": "What is DOM"
+        },
+        {
+          "text": "What is XAS"
+        },
+        {
+          "text": "What is  Jax-B"
+        },
+        {
+          "text": "What is JAX-P"
+        },
+        {
+          "text": "What is JNDI"
+        },
+        {
+          "text": "What is JDBC"
+        },
+        {
+          "text": "What is EJB"
+        },
+        {
+          "text": "What is JPA"
+        },
+        {
+          "text": "What is Hibernate"
+        }
+      ]
+    },
+    {
+      "intent": "AskQuestion",
+      "examples": []
+    },
+    {
+      "intent": "Product_SideEffect",
+      "examples": [
+        {
+          "text": "sideEffect"
+        },
+        {
+          "text": "SideEffect of"
+        }
+      ]
+    },
+    {
+      "intent": "Location",
+      "examples": [
+        {
+          "text": "Current Location"
+        },
+        {
+          "text": "MyLocation"
+        },
+        {
+          "text": "trackme"
+        },
+        {
+          "text": "set myLocation"
+        },
+        {
+          "text": "map"
+        },
+        {
+          "text": "tell me destination"
+        },
+        {
+          "text": "my map"
+        },
+        {
+          "text": "MyCurrentLocation"
+        }
+      ]
+    },
+    {
+      "intent": "General_Ending",
+      "examples": [
+        {
+          "text": "Thanks"
+        },
+        {
+          "text": "Thank you"
+        },
+        {
+          "text": "Thank you so much"
+        },
+        {
+          "text": "by"
+        },
+        {
+          "text": "bye"
+        },
+        {
+          "text": "have a nice day"
+        },
+        {
+          "text": "thanks a lot"
+        }
+      ],
+      "description": "Ending messages"
+    },
+    {
+      "intent": "BARCODE",
+      "examples": [
+        {
+          "text": "Find product through BARCODE?"
+        },
+        {
+          "text": "barcode"
+        }
+      ]
+    },
+    {
+      "intent": "Voice_CMD",
+      "examples": [
+        {
+          "text": "answer me voice"
+        },
+        {
+          "text": "voice"
+        },
+        {
+          "text": "voice output"
+        }
+      ],
+      "description": "Voice Response"
+    },
+    {
+      "intent": "Illness",
+      "examples": [
+        {
+          "text": "fever symptom"
+        },
+        {
+          "text": "fever"
+        },
+        {
+          "text": "Gas symptom"
+        },
+        {
+          "text": "headache  symptom"
+        },
+        {
+          "text": "cancer symptom"
+        }
+      ]
+    },
+    {
+      "intent": "TechnologyArticleNews",
+      "examples": [
+        {
+          "text": "today news"
+        },
+        {
+          "text": "news"
+        },
+        {
+          "text": "TechNews"
+        },
+        {
+          "text": "today techNews?"
+        },
+        {
+          "text": "introduce new technology"
+        },
+        {
+          "text": "new technology lunch"
+        },
+        {
+          "text": "What is new TechNews?"
+        }
+      ]
+    },
+    {
+      "intent": "TypesOfVitaminFood",
+      "examples": [
+        {
+          "text": "VITAMIN-B"
+        },
+        {
+          "text": "VITAMIN-D"
+        },
+        {
+          "text": "VITAMIN-A"
+        },
+        {
+          "text": "VITAMIN-C"
+        },
+        {
+          "text": "VITAMIN-B12"
+        },
+        {
+          "text": "vitaminName"
+        },
+        {
+          "text": "food"
+        }
+      ]
+    },
+    {
+      "intent": "General_Greeting",
+      "examples": [
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "hi"
+        }
+      ],
+      "description": "greeting"
+    },
+    {
+      "intent": "Calculator",
+      "examples": [
+        {
+          "text": "calculate"
+        },
+        {
+          "text": "do calculation"
+        },
+        {
+          "text": "sub"
+        },
+        {
+          "text": "*"
+        },
+        {
+          "text": "."
+        },
+        {
+          "text": "number"
+        },
+        {
+          "text": "subtract"
+        },
+        {
+          "text": "-"
+        },
+        {
+          "text": "add"
+        },
+        {
+          "text": "multification"
+        },
+        {
+          "text": "+"
+        }
+      ]
+    },
+    {
+      "intent": "CurrencyConvertor",
+      "examples": [
+        {
+          "text": "USDtoINR"
+        },
+        {
+          "text": "USD-IDR"
+        },
+        {
+          "text": "IDR-INR"
+        },
+        {
+          "text": "INRtoIDR"
+        },
+        {
+          "text": "INRtoUSD"
+        },
+        {
+          "text": "Indonesian Rupiah"
+        },
+        {
+          "text": "US DOLLAR"
+        },
+        {
+          "text": "I want to exchange Currency"
+        },
+        {
+          "text": "IDR"
+        },
+        {
+          "text": "USD"
+        },
+        {
+          "text": "IndianRupes"
+        },
+        {
+          "text": "INR"
+        },
+        {
+          "text": "IDR-USD"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "sys-percentage",
+      "values": []
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    },
+    {
+      "entity": "sys-currency",
+      "values": []
+    },
+    {
+      "entity": "sys-person",
+      "values": []
+    },
+    {
+      "entity": "sys-location",
+      "values": []
+    },
+    {
+      "entity": "function",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "sub",
+          "synonyms": [
+            "-"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "add",
+          "synonyms": [
+            "+"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "multi",
+          "synonyms": [
+            "*"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    }
+  ],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "Make human Easier",
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_13_1542185368673",
+      "event_name": "focus",
+      "dialog_node": "handler_15_1542185368674",
+      "previous_sibling": "handler_14_1542185368674"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_13_1542185368673",
+      "context": {
+        "Calendar": "#Calendar"
+      },
+      "metadata": {},
+      "conditions": "#Calendar",
+      "event_name": "input",
+      "dialog_node": "handler_14_1542185368674"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_11_1542185276319",
+      "event_name": "focus",
+      "dialog_node": "handler_12_1542185368671",
+      "previous_sibling": "slot_13_1542185368673"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_11_1542185276319",
+      "metadata": {},
+      "variable": "$Calendar",
+      "dialog_node": "slot_13_1542185368673",
+      "previous_sibling": "node_6_1543147672343"
+    },
+    {
+      "type": "standard",
+      "title": "Calander_Response",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Today Is:<? $my_result.date?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_11_1542185276319",
+      "metadata": {},
+      "conditions": "$my_result",
+      "dialog_node": "node_6_1543147672343"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please provide function Name?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_1_1542186834043",
+      "event_name": "nomatch",
+      "dialog_node": "handler_3_1543146858990",
+      "previous_sibling": "handler_2_1542186834043"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1542186834043",
+      "context": {
+        "types": "@function"
+      },
+      "metadata": {},
+      "conditions": "@function",
+      "event_name": "input",
+      "dialog_node": "handler_2_1542186834043",
+      "previous_sibling": "handler_3_1542186834043"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Pls enter function Name?"
+      },
+      "parent": "slot_1_1542186834043",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_3_1542186834043"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "For known today News type 'news'"
+      },
+      "parent": "slot_18_1542185435426",
+      "event_name": "focus",
+      "dialog_node": "handler_20_1542185435426",
+      "previous_sibling": "handler_19_1542185435426"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_18_1542185435426",
+      "context": {
+        "News": "#TechnologyArticleNews"
+      },
+      "conditions": "#TechnologyArticleNews",
+      "event_name": "input",
+      "dialog_node": "handler_19_1542185435426"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1542186933181",
+      "context": {
+        "fNumber": "@sys-number"
+      },
+      "metadata": {},
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_5_1542186933181",
+      "previous_sibling": "handler_6_1542186933181"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please provide Firstvalue"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_4_1542186933181",
+      "event_name": "nomatch",
+      "dialog_node": "handler_5_1543146903039",
+      "previous_sibling": "handler_5_1542186933181"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Pls Enter FirstValue."
+      },
+      "parent": "slot_4_1542186933181",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_6_1542186933181"
+    },
+    {
+      "type": "response_condition",
+      "output": {},
+      "parent": "Welcome",
+      "disabled": true,
+      "metadata": {},
+      "dialog_node": "node_3_1543140755266"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_16_1542185405347",
+      "event_name": "focus",
+      "dialog_node": "handler_17_1542185435418",
+      "previous_sibling": "slot_18_1542185435426"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_16_1542185405347",
+      "metadata": {},
+      "variable": "$News",
+      "dialog_node": "slot_18_1542185435426",
+      "previous_sibling": "node_1_1543141857899"
+    },
+    {
+      "type": "standard",
+      "title": "NewsResponse",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<? $my_result.Author?> HeadLines:\n<? $my_result.HeadLines[0]?>.\n<? $my_result.HeadLines[1]?>.\n<? $my_result.HeadLines[2]?>.\n<? $my_result.HeadLines[3]?>.\n<? $my_result.HeadLines[4]?>.\n<? $my_result.HeadLines[5]?>."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_16_1542185405347",
+      "metadata": {},
+      "conditions": "$input",
+      "dialog_node": "node_1_1543141857899"
+    },
+    {
+      "type": "standard",
+      "title": "BlueBolt_Response",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Answer:<?$resp_value.passages[6].passage_text.substring(8, $resp_value.passages[6].passage_text.length())?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1542894757961",
+      "metadata": {},
+      "conditions": "$resp_value",
+      "dialog_node": "node_1_1543149030643"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Pls Enter SecondValue"
+      },
+      "parent": "slot_7_1542186951244",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1542186951244",
+      "previous_sibling": "handler_8_1542186951244"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1542186951244",
+      "context": {
+        "sNumber": "@sys-number"
+      },
+      "metadata": {},
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_8_1542186951244"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please Enter Proper Input for calculate.."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1541503313944",
+      "disabled": true,
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_1_1542185098426",
+      "previous_sibling": "node_1_1543146048615"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1541503313944",
+      "metadata": {},
+      "variable": "$fNumber",
+      "dialog_node": "slot_4_1542186933181",
+      "previous_sibling": "slot_1_1542186834043"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1541503313944",
+      "metadata": {},
+      "variable": "$sNumber",
+      "dialog_node": "slot_7_1542186951244",
+      "previous_sibling": "slot_4_1542186933181"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1541503313944",
+      "metadata": {},
+      "variable": "$types",
+      "dialog_node": "slot_1_1542186834043",
+      "previous_sibling": "handler_1_1542185098426"
+    },
+    {
+      "type": "standard",
+      "title": "Cal_Response",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Total:<?$cal_value.Total?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1541503313944",
+      "metadata": {},
+      "conditions": "$types && $fNumber && $sNumber",
+      "dialog_node": "node_1_1543146048615"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_2_1543486090553"
+    },
+    {
+      "type": "standard",
+      "title": "Voice_Ans",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Nice talking to you.."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ],
+        "vgwAction": {
+          "command": "Hello how are you",
+          "parameters": {
+            "config": {
+              "voice": "es-ES_LauraVoice",
+              "x-watson-learning-opt-out": true
+            },
+            "credentials": {
+              "url": "https://gateway-syd.watsonplatform.net/text-to-speech/api",
+              "apikey": "Xlchh_wI5LKaa8w-DdPr-DyAypafELqqQM0f8UkKU9mY"
+            },
+            "requestTimeout": 10,
+            "cacheTimeToLive": 336,
+            "connectionTimeout": 30,
+            "jitterBufferDelay": 200
+          }
+        }
+      },
+      "metadata": {},
+      "conditions": "#Voice_CMD",
+      "dialog_node": "node_2_1543486090553",
+      "previous_sibling": "node_1_1543207603564"
+    },
+    {
+      "type": "frame",
+      "title": "News",
+      "output": {
+        "generic": []
+      },
+      "actions": [
+        {
+          "name": "/CG_PandES_WatsonAssistantApps_PoC/hello-world/helloworld",
+          "type": "server",
+          "parameters": {
+            "news": "<? input.text ?>"
+          },
+          "credentials": "$my_creds",
+          "result_variable": "my_result"
+        }
+      ],
+      "context": {
+        "input": "",
+        "my_creds": {
+          "api_key": "e11cc735-df71-49d2-94d6-b4761dc5007d:Uxjz1Pg6KIUkgGRZRYeB13ZwKsvJMgE3t0ryLQnZlSrVjNtTF62lrujkXMu1oArT"
+        }
+      },
+      "metadata": {
+        "fallback": "leave"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1543141857899"
+      },
+      "conditions": "#TechnologyArticleNews",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_16_1542185405347",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_11_1542185276319",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "standard",
+      "title": "Greet",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<?$msg_value.Greating?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "$input",
+      "dialog_node": "node_2_1543140577983",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "frame",
+      "title": "Calculator",
+      "output": {
+        "generic": []
+      },
+      "actions": [
+        {
+          "name": "/CG_PandES_WatsonAssistantApps_PoC/hello-world/helloworld",
+          "type": "server",
+          "parameters": {
+            "types": "<? $types ?>",
+            "firstVal": "<? $fNumber ?>",
+            "secondVal": "<? $sNumber ?>"
+          },
+          "credentials": "$my_creds",
+          "result_variable": "$cal_value"
+        }
+      ],
+      "context": {
+        "input": "",
+        "my_creds": {
+          "api_key": "e11cc735-df71-49d2-94d6-b4761dc5007d:Uxjz1Pg6KIUkgGRZRYeB13ZwKsvJMgE3t0ryLQnZlSrVjNtTF62lrujkXMu1oArT"
+        }
+      },
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_1_1543146048615"
+      },
+      "conditions": "#Calculator || @sys-number",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1541503313944",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_2_1543140577983",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "standard",
+      "title": "TypesOfVitamin",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Transfer to Discovery Service"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#TypesOfVitaminFood",
+      "dialog_node": "node_10_1542188793970",
+      "previous_sibling": "node_16_1542185405347"
+    },
+    {
+      "type": "standard",
+      "title": "#BlueBolt Info",
+      "output": {
+        "generic": []
+      },
+      "actions": [
+        {
+          "name": "/CG_PandES_WatsonAssistantApps_PoC/hello-world/helloworld",
+          "type": "server",
+          "parameters": {
+            "discovery": "discovery",
+            "input_txt": "<? input.text ?>"
+          },
+          "credentials": "$my_creds",
+          "result_variable": "resp_value"
+        }
+      ],
+      "context": {
+        "input": "",
+        "my_creds": {
+          "api_key": "e11cc735-df71-49d2-94d6-b4761dc5007d:Uxjz1Pg6KIUkgGRZRYeB13ZwKsvJMgE3t0ryLQnZlSrVjNtTF62lrujkXMu1oArT"
+        }
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_1_1543149030643"
+      },
+      "conditions": "#Discovery",
+      "dialog_node": "node_1_1542894757961",
+      "previous_sibling": "node_10_1542188793970"
+    },
+    {
+      "type": "standard",
+      "title": "General_Ending",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Nice talking with you."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#General_Ending",
+      "dialog_node": "node_1_1543207603564",
+      "previous_sibling": "node_1_1542894757961"
+    },
+    {
+      "type": "frame",
+      "title": "Calander",
+      "output": {
+        "generic": []
+      },
+      "actions": [
+        {
+          "name": "/CG_PandES_WatsonAssistantApps_PoC/hello-world/helloworld",
+          "type": "server",
+          "parameters": {
+            "todayDay": "<? $Calendar?>"
+          },
+          "credentials": "$my_creds",
+          "result_variable": "my_result"
+        }
+      ],
+      "context": {
+        "input": "",
+        "context": {
+          "my_result": ""
+        },
+        "my_creds": {
+          "api_key": "e11cc735-df71-49d2-94d6-b4761dc5007d:Uxjz1Pg6KIUkgGRZRYeB13ZwKsvJMgE3t0ryLQnZlSrVjNtTF62lrujkXMu1oArT"
+        }
+      },
+      "metadata": {
+        "fallback": "leave"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_6_1543147672343"
+      },
+      "conditions": "#Calendar",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_11_1542185276319",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1541503313944",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": []
+      },
+      "actions": [
+        {
+          "name": "/CG_PandES_WatsonAssistantApps_PoC/hello-world/helloworld",
+          "type": "server",
+          "parameters": {
+            "msg": "<? input.text ?>"
+          },
+          "credentials": "$my_creds",
+          "result_variable": "$msg_value"
+        }
+      ],
+      "context": {
+        "my_creds": {
+          "api_key": "e11cc735-df71-49d2-94d6-b4761dc5007d:Uxjz1Pg6KIUkgGRZRYeB13ZwKsvJMgE3t0ryLQnZlSrVjNtTF62lrujkXMu1oArT"
+        }
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1543140577983"
+      },
+      "conditions": "welcome || #General_Greeting",
+      "digress_in": "does_not_return",
+      "dialog_node": "Welcome",
+      "digress_out": "allow_all"
+    }
+  ],
+  "workspace_id": "25d41c74-3b39-45f3-b3ae-510ff9e0938d",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
