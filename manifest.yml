@@ -1,6 +1,6 @@
 ---
 declared-services:
-  wga-assistant:
+  skill-PersonalAssist:
     label: conversation
     plan: free
 applications:
@@ -13,4 +13,4 @@ applications:
   random-route: false
   timeout: 180
   services:
-  - wga-assistant
+  - skill-PersonalAssist
