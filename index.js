@@ -28,7 +28,7 @@ const port = process.env.PORT || 8080;
 
 require('dotenv').config();
 
-const DEFAULT_NAME = 'rent-a-car';
+const DEFAULT_NAME = 'personalAssist';
 const WatsonAssistantSetup = require('./lib/watson-assistant-setup');
 let setupError = '';
 
