@@ -28,40 +28,20 @@ const port = process.env.PORT || 8080;
 
 require('dotenv').config();
 
-const DEFAULT_NAME = 'personalAssist';
-const WatsonAssistantSetup = require('./lib/watson-assistant-setup');
 let setupError = '';
 
-/**
- * Handle setup errors by logging and appending to the global error text.
- * @param {String} reason - The error message for the setup error.
- */
-function handleSetupError(reason) {
-  setupError += ' ' + reason;
-  console.error('The app failed to initialize properly. Setup and restart needed.' + setupError);
-  console.error('\nAborting due to setup error!');
-  process.exit(1);
-}
 
 // Connect a client to Watson Assistant
 // The SDK gets credentials from the environment.
-const assistant = new AssistantV1({ version: '2018-02-16' });
-console.log('Connected to Watson Assistant');
-let workspaceID; // workspaceID will be set when the workspace is created or validated.
-const assistantSetup = new WatsonAssistantSetup(assistant);
-const workspaceJson = JSON.parse(fs.readFileSync('data/assistant/workspaces/skill-PersonalAssist.json'));
-const assistantSetupParams = { default_name: DEFAULT_NAME, workspace_json: workspaceJson };
-assistantSetup.setupAssistantWorkspace(assistantSetupParams, (err, data) => {
-  if (err) {
-    handleSetupError(err);
-  } else {
-    console.log('Watson Assistant is ready!');
-    workspaceID = data;
-  }
+var assistant = new AssistantV1({
+  version: '2018-09-20',
+  username: 'b16e4837-3ac4-4caa-8bbb-4f2d3c77a3e5',
+  password: 'DetkZPVoN1Gl',
+  url: 'https://gateway.watsonplatform.net/assistant/api'
 });
+console.log('Connected to Watson Assistant');
+var workspaceID='25d41c74-3b39-45f3-b3ae-510ff9e0938d';
 
-app.use(bodyParser.json()); // support json encoded bodies
-app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 const START_OVER = 'start over';
 const CANCEL = 'goodbye';
@@ -74,7 +54,8 @@ let expectUserResponse;
  * @param {*} request - incoming request
  * @param {*} workspaceId - Watson Assistant workspace ID
  */
-function assistantMessage(request, workspaceId) {
+
+ function assistantMessage(request, workspaceId) {
   if (!workspaceId) {
     const msg = 'Error talking to Watson Assistant. Workspace ID is not set.';
     console.error(msg);
@@ -189,7 +170,8 @@ app.post('/', function(args, res) {
     const request = args.body;
     console.log('Google Assistant is calling');
     console.log(JSON.stringify(request, null, 2));
-    assistantMessage(request, workspaceID)
+    
+	assistantMessage(request, workspaceID)
       .then(resp => {
         res.setHeader('Content-Type', 'application/json');
         res.append('Google-Assistant-API-Version', 'v2');
