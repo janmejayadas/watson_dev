@@ -73,7 +73,7 @@ let expectUserResponse;
     console.log('Google intent:' + intent);
     console.log('Input text:' + input);
 
-    let context = {}; // Clear context and conditionally set it with stashed context
+   // let context = {}; // Clear context and conditionally set it with stashed context
     expectUserResponse = true;
     if (intent === 'actions.intent.CANCEL') {
       // expectUserResponse must be false when action.intent.CANCEL
@@ -85,9 +85,9 @@ let expectUserResponse;
     } else if (request.conversation && request.conversation.conversationToken) {
       // Use conversationToken to continue the conversation.
       // Decode/verify the incoming conversationToken and use it as context.
-      context = jwt.verify(request.conversation.conversationToken, secret);
-      console.log('Incoming context: ');
-      console.log(context);
+    //  context = jwt.verify(request.conversation.conversationToken, secret);
+     // console.log('Incoming context: ');
+     // console.log(context);
     }
 
     // Forward input text to Watson Assistant
@@ -118,7 +118,7 @@ let expectUserResponse;
  */
 function formatResponse(response) {
   // store context in conversationToken
-  const conversationToken = jwt.sign(response.context, secret);
+  //const conversationToken = jwt.sign(response.context, secret);
 
   // Combine the output messages into one message.
   const output = response.output.text.join(' ');
@@ -135,7 +135,7 @@ function formatResponse(response) {
     suggestions: []
   };
   const resp = {
-    conversationToken: conversationToken,
+   // conversationToken: conversationToken,
     expectUserResponse: expectUserResponse
   };
 
