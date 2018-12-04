@@ -168,7 +168,7 @@ app.get('/', (req, res) => res.send('Watson for Google Assistant app is running.
 // POST: Requests from Google Assistant
 // POST: Requests from Google Assistant
 
-app.post('/', function(args, res) =>res.send('from Watson Hello Janmejaya'));
+app.post('/', (args, res) =>res.send('from Watson Hello Janmejaya'));
 
 // Start the HTTP server
 app.listen(port);
