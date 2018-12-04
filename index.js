@@ -35,12 +35,12 @@ let setupError = '';
 // The SDK gets credentials from the environment.
 var assistant = new AssistantV1({
   version: '2018-09-20',
-  username: 'b16e4837-3ac4-4caa-8bbb-4f2d3c77a3e5',
-  password: 'DetkZPVoN1Gl',
+  username: 'f513eee1-bb2e-4dcf-af33-4539aa88c681',
+  password: 'fVKCTj83jbw2',
   url: 'https://gateway.watsonplatform.net/assistant/api'
 });
 console.log('Connected to Watson Assistant');
-var workspaceID='25d41c74-3b39-45f3-b3ae-510ff9e0938d';
+var workspaceID='562dfee8-9f17-4df5-a880-a057a57e6ba6';
 
 
 const START_OVER = 'start over';
