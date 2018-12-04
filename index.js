@@ -1,4 +1,3 @@
-
 /**
  * Copyright 2017 IBM Corp. All Rights Reserved.
  *
@@ -48,28 +47,54 @@ const START_OVER = 'start over';
 const CANCEL = 'goodbye';
 let expectUserResponse;
 
+/**
+ * Forword input text and stored context to Watson Assistant and
+ * return the response.
+ *
+ * @param {*} request - incoming request
+ * @param {*} workspaceId - Watson Assistant workspace ID
+ */
 
-// GET: Just show something on the default app URL page
-app.get('/', (req, res) => res.send('Watson for Google Assistant app is running.'));
-
-// POST: Requests from Google Assistant
-// POST: Requests from Google Assistant
-
-//app.post('/', (args, res) =>res.send('from Watson Hello Janmejaya'));
-app.post('/', function(args, res) {
-
+ function assistantMessage(request, workspaceId) {
+  if (!workspaceId) {
+    const msg = 'Error talking to Watson Assistant. Workspace ID is not set.';
+    console.error(msg);
+    return Promise.reject(msg);
+  }
   return new Promise(function(resolve, reject) {
-    const request = args.body;
-    console.log('Google Assistant is calling');
-    console.log(JSON.stringify(request, null, 2));
-	
-	
-	 // Forward input text to Watson Assistant
+    console.log('Incoming request:');
+    console.log(request);
+    // Input from Google Assistant
+    let input = request.inputs[0].rawInputs[0].query;
+    const intent = request.inputs[0].intent;
+    const conversationType = request.conversation.type;
+    console.log('Conversation type:' + conversationType);
+    console.log('Google intent:' + intent);
+    console.log('Input text:' + input);
+
+    let context = {}; // Clear context and conditionally set it with stashed context
+    expectUserResponse = true;
+    if (intent === 'actions.intent.CANCEL') {
+      // expectUserResponse must be false when action.intent.CANCEL
+      expectUserResponse = false;
+      input = CANCEL; // Say goodbye
+    } else if (conversationType === 'NEW') {
+      // Input might be "Talk to <name>". Ignore that and trigger a fresh start.
+      input = START_OVER;
+    } else if (request.conversation && request.conversation.conversationToken) {
+      // Use conversationToken to continue the conversation.
+      // Decode/verify the incoming conversationToken and use it as context.
+      context = jwt.verify(request.conversation.conversationToken, secret);
+      console.log('Incoming context: ');
+      console.log(context);
+    }
+
+    // Forward input text to Watson Assistant
     assistant.message(
       {
-        input: { text: START_OVER },
-        workspace_id: workspaceID,
-       // context: context
+        input: { text: input },
+        workspace_id: workspaceId,
+        context: context
       },
       function(err, watsonResponse) {
         if (err) {
@@ -77,19 +102,91 @@ app.post('/', function(args, res) {
           reject('Error talking to Watson Assistant.');
         } else {
           console.log(watsonResponse);
-          //context = watsonResponse.context; // Update global context
-		  // Combine the output messages into one message.
-                 var output = response.output.text.join(' ');
-          resolve(output);
+          context = watsonResponse.context; // Update global context
+          resolve(watsonResponse);
         }
+      }
+    );
+  });
+}
+
+/**
+ * Format the response for Google Assistant.
+ *
+ * @param {*} response - Response from Watson Assistant
+ */
+function formatResponse(response) {
+  // store context in conversationToken
+  const conversationToken = jwt.sign(response.context, secret);
+
+  // Combine the output messages into one message.
+  const output = response.output.text.join(' ');
+
+  // Build the response JSON
+  const richResponse = {
+    items: [
+      {
+        simpleResponse: {
+          textToSpeech: output
+        }
+      }
+    ],
+    suggestions: []
+  };
+  const resp = {
+    conversationToken: conversationToken,
+    expectUserResponse: expectUserResponse
+  };
+
+  if (expectUserResponse) {
+    resp.expectedInputs = [
+      {
+        inputPrompt: {
+          richInitialPrompt: richResponse
+        },
+        possibleIntents: [
+          {
+            intent: 'actions.intent.TEXT'
+          }
+        ]
+      }
+    ];
+  } else {
+    const s = output.substring(0, 59); // Has to be < 60 chars.  :(
+    resp.finalResponse = { speechResponse: { textToSpeech: s } };
+  }
+
+  console.log('Response:');
+  console.log(resp);
+  return resp;
+}
+
+// GET: Just show something on the default app URL page
+app.get('/', (req, res) => res.send('Watson for Google Assistant app is running.'));
+
+// POST: Requests from Google Assistant
+app.post('/', function(args, res) {
+
+  return new Promise(function(resolve, reject) {
+    const request = args.body;
+    console.log('Google Assistant is calling');
+    console.log(JSON.stringify(request, null, 2));
+    
+	assistantMessage(request, workspaceID)
+      .then(resp => {
+        res.setHeader('Content-Type', 'application/json');
+        res.append('Google-Assistant-API-Version', 'v2');
+        res.json(formatResponse(resp));
+      })
+      .catch(function(err) {
+        console.error('Error!');
+        console.dir(err);
       });
-      
+	  
   });
   
+  
 });
-
-
-
 
 // Start the HTTP server
 app.listen(port);
