@@ -94,8 +94,8 @@ let expectUserResponse;
     assistant.message(
       {
         input: { text: input },
-        workspace_id: workspaceId,
-        context: context
+        workspace_id: workspaceId
+      //  context: context
       },
       function(err, watsonResponse) {
         if (err) {
@@ -103,7 +103,7 @@ let expectUserResponse;
           reject('Error talking to Watson Assistant.');
         } else {
           console.log(watsonResponse);
-          context = watsonResponse.context; // Update global context
+          //context = watsonResponse.context; // Update global context
           resolve(watsonResponse);
         }
       }
@@ -168,7 +168,29 @@ app.get('/', (req, res) => res.send('Watson for Google Assistant app is running.
 // POST: Requests from Google Assistant
 // POST: Requests from Google Assistant
 
-app.post('/', (args, res) =>res.send('from Watson Hello Janmejaya'));
+//app.post('/', (args, res) =>res.send('from Watson Hello Janmejaya'));
+app.post('/', function(args, res) {
+
+  return new Promise(function(resolve, reject) {
+    const request = args.body;
+    console.log('Google Assistant is calling');
+    console.log(JSON.stringify(request, null, 2));
+    
+	assistantMessage(request, workspaceID)
+      .then(resp => {
+        res.setHeader('Content-Type', 'application/json');
+        res.append('Google-Assistant-API-Version', 'v2');
+        res.json(formatResponse(resp));
+      })
+      .catch(function(err) {
+        console.error('Error!');
+        console.dir(err);
+      });
+	  
+  });
+  
+  
+});
 
 // Start the HTTP server
 app.listen(port);
