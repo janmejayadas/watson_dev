@@ -166,24 +166,9 @@ function formatResponse(response) {
 app.get('/', (req, res) => res.send('Watson for Google Assistant app is running.'));
 
 // POST: Requests from Google Assistant
-app.post('/', function(args, res) {
-  return new Promise(function(resolve, reject) {
-    const request = args.body;
-    console.log('Google Assistant is calling');
-    console.log(JSON.stringify(request, null, 2));
-    
-	assistantMessage(request, workspaceID)
-      .then(resp => {
-        res.setHeader('Content-Type', 'application/json');
-        res.append('Google-Assistant-API-Version', 'v2');
-        res.json(formatResponse(res));
-      })
-      .catch(function(err) {
-        console.error('Error!');
-        console.dir(err);
-      });
-  });
-});
+// POST: Requests from Google Assistant
+
+app.post('/', function(args, res) =>res.send('from Watson Hello Janmejaya'));
 
 // Start the HTTP server
 app.listen(port);
