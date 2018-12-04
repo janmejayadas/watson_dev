@@ -63,15 +63,12 @@ app.post('/', function(args, res) {
     console.log('Google Assistant is calling');
     console.log(JSON.stringify(request, null, 2));
 	
-	if (request.conversation.type === 'NEW') {
-      // Input might be "Talk to <name>". Ignore that and trigger a fresh start.
-      input = START_OVER;
-    } 
+	
 	 // Forward input text to Watson Assistant
     assistant.message(
       {
-        input: { text: input },
-        workspace_id: workspaceId,
+        input: { text: START_OVER },
+        workspace_id: workspaceID,
        // context: context
       },
       function(err, watsonResponse) {
