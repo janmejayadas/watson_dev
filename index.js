@@ -173,10 +173,10 @@ app.post('/', function(args, res) {
     console.log(JSON.stringify(request, null, 2));
     
 	assistantMessage(request, workspaceID)
-      .then(res => {
+      .then(resp => {
         res.setHeader('Content-Type', 'application/json');
         res.append('Google-Assistant-API-Version', 'v2');
-        res.json(formatResponse(resp));
+        res.json(formatResponse(res));
       })
       .catch(function(err) {
         console.error('Error!');
