@@ -160,6 +160,8 @@ function formatResponse(response) {
   console.log(resp);
   return resp;
 }
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 // GET: Just show something on the default app URL page
 app.get('/', (req, res) => res.send('Watson for Google Assistant app is running.'));
